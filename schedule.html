@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Schedule a Meeting — CodeBuddy</title>
+<meta name="description" content="Schedule a 30-minute consultation with CodeBuddy. Tell us about your project and we'll find the perfect time to discuss how we can help.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/schedule.css">
+</head>
+<body>
+
+<div class="page-wrap">
+
+  <div class="bg-wrap" aria-hidden="true">
+    <div class="bg-grad"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-shadow"></div>
+  </div>
+
+  <header class="header">
+    <a href="index.html" class="header-logo">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+        <rect width="34" height="34" rx="8" fill="#4ade80"/>
+        <path d="M10 23V10h5l4 9 4-9h5v13h-5v-7l-4 7-4-7v7h-5Z" fill="#05060f"/>
+      </svg>
+      <span>CodeBuddy</span>
+    </a>
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Solutions</a>
+      <a href="#">Resources</a>
+      <a href="#">Company</a>
+    </nav>
+    <a href="index.html" class="header-back">← Back to Home</a>
+  </header>
+
+  <section class="schedule-hero">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Free 30-Minute Consultation
+    </div>
+    <h1 class="schedule-title">
+      Schedule a <span class="em">Meeting</span>
+    </h1>
+    <p class="schedule-sub">
+      Tell us about your project and we'll find the perfect time to discuss how
+      CodeBuddy can help you build the software your business needs.
+    </p>
+  </section>
+
+  <div class="schedule-wrap">
+
+    <div class="schedule-info">
+
+      <div class="schedule-info-card">
+        <div class="schedule-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>What to Expect</h3>
+        <p>In this 30-minute call, we'll learn about your business, answer your questions, and show you how CodeBuddy can help you build better software — whether you want to build it yourself or have us build it for you.</p>
+        <ul>
+          <li>Understand your project goals</li>
+          <li>Demo of CodeBuddy Studio</li>
+          <li>Discuss CodeBuddy Solutions options</li>
+          <li>Outline next steps &amp; timeline</li>
+        </ul>
+      </div>
+
+      <div class="schedule-info-card">
+        <div class="schedule-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Who Should Attend?</h3>
+        <p>Founders, business owners, and team leads who want to build custom software — without the traditional cost, complexity, and timelines.</p>
+        <ul>
+          <li>Non-technical founders</li>
+          <li>Operations &amp; project managers</li>
+          <li>Sales &amp; marketing leaders</li>
+          <li>Anyone tired of expensive subscriptions</li>
+        </ul>
+      </div>
+
+      <div class="schedule-info-card">
+        <div class="schedule-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Your Data is Safe</h3>
+        <p>All consultations are confidential. We take your privacy and data security seriously with enterprise-grade encryption and compliance standards.</p>
+      </div>
+
+    </div>
+
+    <div class="schedule-form-wrap">
+      <h2 class="schedule-form-title">Book Your Call</h2>
+      <p class="schedule-form-sub">Fill in the details and we'll confirm your slot.</p>
+
+      <div class="offering-toggle" id="offeringToggle">
+        <button class="offering-option active" data-value="studio" onclick="selectOffering(this)">
+          CodeBuddy Studio
+          <small>Build it yourself</small>
+        </button>
+        <button class="offering-option" data-value="solutions" onclick="selectOffering(this)">
+          CodeBuddy Solutions
+          <small>Build it for me</small>
+        </button>
+      </div>
+      <p class="offering-desc" id="offeringDesc">
+        I want to use CodeBuddy Studio to plan, build, and launch my own software.
+      </p>
+
+      <form id="scheduleForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="John Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="john@company.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" placeholder="Your Company Inc.">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="+1 (555) 000-0000">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="preferred_date">Preferred Date</label>
+          <input type="date" id="preferred_date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="preferred_time">Preferred Time</label>
+          <select id="preferred_time" required>
+            <option value="">Select a time slot</option>
+            <option value="9:00 AM">9:00 AM</option>
+            <option value="10:00 AM">10:00 AM</option>
+            <option value="11:00 AM">11:00 AM</option>
+            <option value="12:00 PM">12:00 PM</option>
+            <option value="1:00 PM">1:00 PM</option>
+            <option value="2:00 PM">2:00 PM</option>
+            <option value="3:00 PM">3:00 PM</option>
+            <option value="4:00 PM">4:00 PM</option>
+            <option value="5:00 PM">5:00 PM</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Tell us about your project</label>
+          <textarea id="message" placeholder="Briefly describe what you're looking to build..."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Confirm Booking →</button>
+        <p class="form-note">We'll send a calendar invite to confirm your slot.</p>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/schedule.js"></script>
+</body>
+</html>
